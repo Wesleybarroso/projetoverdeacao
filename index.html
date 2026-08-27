@@ -1,84 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#153b2d" />
+    <meta name="description" content="Verde Ação: uma comunidade de voluntariado para cultivar cuidado ambiental, educação e transformação local." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Projeto Verde Ação</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Verde Ação — Pequenas atitudes, impacto vivo</title>
   </head>
   <body>
-    <header>
-      <div class="box-header">
-        <h1>Verde Ação</h1>
-        <p>
-          Ser voluntário na Verde Ação é plantar esperança e colher
-          transformação. Juntos, cuidamos do planeta e inspiramos mudanças
-          reais!
-        </p>
-        <button class="button-join">Quero ser voluntário</button>
-      </div>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Verde Ação, início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>VERDE<br /><b>AÇÃO</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <span class="sr-only">Abrir menu</span><i></i><i></i>
+      </button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Navegação principal" data-menu>
+        <a href="#movimento">O movimento</a>
+        <a href="#frentes">Frentes de ação</a>
+        <a href="#participar">Participar</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="header-cta" href="#participar">Quero somar <span aria-hidden="true">↗</span></a>
     </header>
-    <main>
-      <section class="cards">
-        <article>
-          <img src="./assets/imagemGirassol.png" alt="Imagem girassol" />
-          <h3>Plantio de mudas</h3>
-          <p>Cada muda plantada ajuda a restaurar o meio ambiente</p>
-          <button class="button-details">Ver mais</button>
-        </article>
-        <article>
-          <img
-            src="./assets/criancas.png"
-            alt="Imagem crianças  com cartaz sobre reciclagem"
-          />
-          <h3>Educação Ambiental</h3>
-          <p>Promove oficinas e rodas de conversas</p>
-          <button class="button-details">Ver mais</button>
-        </article>
-        <article>
-          <img src="./assets/plantio.png" alt="Imagem de um  plantio" />
-          <h3>Mapeamento</h3>
-          <p>Indentifique areas que precisam de mapeamento</p>
-          <button class="button-details">Ver mais</button>
-        </article>
-        <article>
-          <img
-            src="./assets/colheita.png"
-            alt="Imagem de mãos realizando colheita"
-          />
-          <h3>Cuidados</h3>
-          <p>Ajude a manter areas preservadas</p>
-          <button class="button-details">Ver mais</button>
-        </article>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit--one" data-depth="0.09" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit--two" data-depth="-0.06" aria-hidden="true"></div>
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-content container">
+          <p class="eyebrow"><span></span>COMUNIDADE EM MOVIMENTO</p>
+          <h1 id="hero-title">Cultivar cuidado.<br /><em>Transformar</em> futuro.</h1>
+          <p class="hero-lead">A Verde Ação aproxima pessoas, território e propósito em experiências de voluntariado que fazem o bem sair do plano e ganhar chão.</p>
+          <div class="hero-actions">
+            <a class="button button--light" href="#participar">Quero ser voluntário <span aria-hidden="true">↓</span></a>
+            <a class="text-link text-link--light" href="#movimento">Conheça o movimento <span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="hero-note"><span class="pulse" aria-hidden="true"></span> Ações abertas para novos voluntários</div>
+        </div>
+        <div class="hero-aside" aria-hidden="true">
+          <span>01 / 04</span><i></i><small>do cuidado<br />nasce impacto</small>
+        </div>
+        <a class="scroll-hint" href="#movimento" aria-label="Ir para o movimento"><span>ROLE PARA DESCOBRIR</span><i></i></a>
       </section>
-      <section class="container-form">
-        <h1>Cadastre-se como voluntário</h1>
-        <p>
-          Faça parte de ações que transformam o mundo. Com pequenas atitudes,
-          você pode gerar grandes impactos na natureza e na comunidade
-        </p>
-        <form action="">
-          <input type="text" placeholder="Nome" />
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Cidade" />
-          <select>
-            <option value="" disabled selected>Selecione uma atividade</option>
-            <option value="manutencao">Manutenção</option>
-            <option value="atendimento">Atendimento</option>
-            <option value="desenvolvimento">Desenvolvimento</option>
-          </select>
-          <button class="button-submit">Cadastrar</button>
-        </form>
+
+      <section id="movimento" class="intro-section section">
+        <div class="container intro-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow--earth"><span></span>VERDE AÇÃO, NA PRÁTICA</p>
+            <h2>Quando a vontade de cuidar encontra <em>um caminho coletivo.</em></h2>
+          </div>
+          <div class="intro-copy reveal" data-delay="100">
+            <p>Somos uma rede de pessoas que acredita no poder das pequenas atitudes consistentes. Plantamos, aprendemos, mapeamos e preservamos junto com quem vive cada território.</p>
+            <a class="text-link" href="#frentes">Ver como atuamos <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="impact-ribbon" aria-label="Princípios da Verde Ação">
+          <span>ESCUTA ATENTA</span><i>✦</i><span>AÇÃO LOCAL</span><i>✦</i><span>FUTURO COMPARTILHADO</span><i>✦</i><span>ESCUTA ATENTA</span>
+        </div>
+      </section>
+
+      <section id="frentes" class="action-section section">
+        <div class="container">
+          <div class="section-top reveal">
+            <div><p class="eyebrow eyebrow--earth"><span></span>FRENTES DE AÇÃO</p><h2>Todo gesto encontra<br /><em>um lugar para crescer.</em></h2></div>
+            <p>Escolha uma frente, conheça suas atividades e encontre a forma mais próxima de participar.</p>
+          </div>
+          <div class="action-grid">
+            <article class="action-card action-card--wide reveal" data-delay="40">
+              <img src="./assets/imagemGirassol.png" alt="Girassóis iluminados pelo sol" />
+              <div class="card-shade"></div>
+              <div class="card-number">01</div>
+              <div class="card-content"><p>REGENERAÇÃO</p><h3>Plantio de mudas</h3><span>Cultivamos novas áreas e apoiamos a recuperação de espaços verdes.</span><button type="button" class="card-link" data-program="Plantio de mudas">Saiba mais <b>↗</b></button></div>
+            </article>
+            <article class="action-card reveal" data-delay="100">
+              <img src="./assets/criancas.png" alt="Crianças reunidas em atividade de educação ambiental" />
+              <div class="card-shade"></div>
+              <div class="card-number">02</div>
+              <div class="card-content"><p>CONSCIÊNCIA</p><h3>Educação ambiental</h3><span>Oficinas e conversas que transformam informação em cuidado cotidiano.</span><button type="button" class="card-link" data-program="Educação ambiental">Saiba mais <b>↗</b></button></div>
+            </article>
+            <article class="action-card reveal" data-delay="160">
+              <img src="./assets/plantio.png" alt="Mãos plantando uma muda no solo" />
+              <div class="card-shade"></div>
+              <div class="card-number">03</div>
+              <div class="card-content"><p>CONHECIMENTO</p><h3>Mapeamento vivo</h3><span>Observamos o território para identificar prioridades e ampliar a ação.</span><button type="button" class="card-link" data-program="Mapeamento vivo">Saiba mais <b>↗</b></button></div>
+            </article>
+            <article class="action-card action-card--wide reveal" data-delay="220">
+              <img src="./assets/colheita.png" alt="Mãos colhendo alimentos cultivados" />
+              <div class="card-shade"></div>
+              <div class="card-number">04</div>
+              <div class="card-content"><p>CONTINUIDADE</p><h3>Cuidados compartilhados</h3><span>Acompanhamos espaços preservados para que o impacto continue depois do encontro.</span><button type="button" class="card-link" data-program="Cuidados compartilhados">Saiba mais <b>↗</b></button></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto-section section" aria-labelledby="manifesto-title">
+        <div class="manifesto-art" data-depth="0.05" aria-hidden="true"></div>
+        <div class="container manifesto-grid">
+          <div class="manifesto-stamp reveal"><span>VERDE<br />AÇÃO</span><i>✦</i><small>DESDE<br />O CHÃO</small></div>
+          <div class="manifesto-copy reveal" data-delay="100"><p class="eyebrow"><span></span>UMA IDEIA SIMPLES</p><h2 id="manifesto-title">O planeta não precisa de espectadores.<br /><em>Precisa de presença.</em></h2><p>Por isso, criamos encontros possíveis: com escuta, aprendizado e tarefas que cabem na rotina. Você não precisa saber tudo para começar — só precisa vir.</p></div>
+        </div>
+      </section>
+
+      <section id="participar" class="join-section section" aria-labelledby="join-title">
+        <div class="container join-grid">
+          <div class="join-copy reveal"><p class="eyebrow eyebrow--earth"><span></span>SEU PRÓXIMO PASSO</p><h2 id="join-title">A mudança também<br />pode começar <em>com você.</em></h2><p>Conte onde você está e qual frente mais faz sentido. Entraremos em contato quando houver uma ação compatível com seu interesse.</p><div class="join-points"><span><b>01</b> Você escolhe uma frente</span><span><b>02</b> A gente aproxima caminhos</span><span><b>03</b> Você entra em ação</span></div></div>
+          <form class="volunteer-form reveal" data-delay="130" data-volunteer-form novalidate>
+            <div class="form-heading"><span>FORMULÁRIO DE INTERESSE</span><small>Campos com * são obrigatórios</small></div>
+            <label>Nome completo *<input name="name" type="text" autocomplete="name" required placeholder="Como podemos te chamar?" /></label>
+            <label>E-mail *<input name="email" type="email" autocomplete="email" required placeholder="voce@email.com" /></label>
+            <div class="form-row"><label>Cidade *<input name="city" type="text" autocomplete="address-level2" required placeholder="Sua cidade" /></label><label>Frente de interesse *<select name="interest" required><option value="" selected disabled>Escolha uma</option><option>Plantio de mudas</option><option>Educação ambiental</option><option>Mapeamento vivo</option><option>Cuidados compartilhados</option></select></label></div>
+            <label>Como você gostaria de ajudar?<textarea name="message" rows="3" placeholder="Conte um pouco sobre sua disponibilidade ou interesse."></textarea></label>
+            <label class="check-label"><input name="consent" type="checkbox" required /><span>Autorizo o contato da Verde Ação sobre oportunidades de voluntariado.</span></label>
+            <p class="form-error" data-form-error role="alert"></p>
+            <button class="button button--earth" type="submit">Enviar interesse <span aria-hidden="true">↗</span></button>
+            <p class="form-success" data-form-success hidden tabindex="-1">Recebemos seu interesse. Obrigado por querer somar com a Verde Ação.</p>
+          </form>
+        </div>
+      </section>
+
+      <section id="contato" class="closing-section">
+        <div class="container closing-inner reveal"><p class="eyebrow"><span></span>VERDE AÇÃO</p><h2>Deixe sua presença<br /><em>fazer raiz.</em></h2><a class="button button--light" href="mailto:contato@verdeacao.org">Falar com a gente <span aria-hidden="true">↗</span></a></div>
       </section>
     </main>
-    <footer>
-      <p>© todos os direitos reservados </p>
+
+    <footer class="site-footer">
+      <div class="container footer-grid"><a class="brand brand--footer" href="#inicio" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>VERDE<br /><b>AÇÃO</b></span></a><p>Comunidade, território e cuidado em movimento.</p><div><a href="#movimento">O movimento</a><a href="#frentes">Frentes</a><a href="#participar">Participar</a></div><div><button type="button" data-open-cookies>Preferências de cookies</button><a href="mailto:contato@verdeacao.org">contato@verdeacao.org</a></div></div>
+      <div class="container footer-bottom"><span>© 2026 Verde Ação. Todos os direitos reservados.</span><span>Feito para cuidar do que é comum.</span></div>
     </footer>
+
+    <div class="program-dialog" data-program-dialog hidden role="dialog" aria-modal="true" aria-labelledby="program-title">
+      <div class="dialog-backdrop" data-close-dialog></div><div class="dialog-panel"><button class="dialog-close" type="button" data-close-dialog aria-label="Fechar detalhes">×</button><p class="eyebrow eyebrow--earth"><span></span>FRENTE DE AÇÃO</p><h2 id="program-title" data-program-title>Plantio de mudas</h2><p data-program-description>Junte-se a uma ação prática para ampliar o cuidado com áreas verdes.</p><a class="button button--earth" href="#participar" data-dialog-join>Quero participar <span aria-hidden="true">↓</span></a></div>
+    </div>
+
+    <section class="cookie-layer" data-cookie-layer aria-label="Privacidade e cookies" hidden>
+      <div class="cookie-panel"><div class="cookie-mark" aria-hidden="true">✦</div><div class="cookie-copy"><p>PRIVACIDADE E COOKIES</p><h2>Você escolhe como navegar.</h2><span>Usamos cookies essenciais para lembrar suas preferências. Recursos opcionais só são ativados com seu consentimento.</span></div><div class="cookie-actions"><button type="button" class="cookie-link" data-cookie-settings>Preferências</button><button type="button" class="cookie-link" data-cookie-essential>Somente essenciais</button><button type="button" class="button button--earth" data-cookie-accept>Aceitar todos</button></div></div>
+      <div class="cookie-preferences" data-cookie-preferences hidden><div><p>PERSONALIZE SUA EXPERIÊNCIA</p><h2>Preferências de cookies</h2></div><label><span><b>Cookies essenciais</b><small>Necessários para salvar suas escolhas.</small></span><input type="checkbox" checked disabled /></label><label><span><b>Medição anônima</b><small>Ajuda a entender como o site é utilizado.</small></span><input type="checkbox" data-analytics-toggle /></label><div><button type="button" class="cookie-link" data-cookie-close>Voltar</button><button type="button" class="button button--earth" data-cookie-save>Salvar preferências</button></div></div>
+    </section>
   </body>
 </html>
