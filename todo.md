@@ -7,3 +7,4 @@
 - [ ] Tornar funcionais a navegação, os CTAs de participação, o formulário de contato e os botões de política de privacidade.
 - [ ] Validar a experiência em desktop e mobile, inclusive ausência de transbordamento horizontal e rolagem ativa.
 - [ ] Corrigir a sintaxe da interação do menu móvel identificada na validação automatizada.
+- [ ] Ocultar o painel de preferências de cookies até a solicitação explícita do visitante.
