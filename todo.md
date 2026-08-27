@@ -9,3 +9,4 @@
 - [ ] Corrigir a sintaxe da interação do menu móvel identificada na validação automatizada.
 - [ ] Ocultar o painel de preferências de cookies até a solicitação explícita do visitante.
 - [ ] Ocultar o banner principal de cookies enquanto o painel de preferências estiver aberto.
+- [ ] Adicionar e validar os controles de política de privacidade e política de cookies no rodapé do Verde Ação.

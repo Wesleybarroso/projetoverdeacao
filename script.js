@@ -84,6 +84,27 @@ function setupVolunteerForm() {
   });
 }
 
+function setupPolicies() {
+  const dialog = document.querySelector('[data-policy-dialog]');
+  const title = document.querySelector('[data-policy-title]');
+  const content = document.querySelector('[data-policy-content]');
+  const copy = {
+    privacy: { title: 'Política de privacidade', body: '<p>Usamos as informações enviadas neste formulário apenas para responder ao seu interesse em participar de ações da Verde Ação.</p><p>Não vendemos dados pessoais. Você pode solicitar esclarecimentos ou atualização das informações pelo e-mail de contato exibido no rodapé.</p>' },
+    cookies: { title: 'Política de cookies', body: '<p>Cookies essenciais guardam sua preferência de consentimento para que o aviso não apareça a cada visita.</p><p>A medição anônima é opcional e só é considerada quando você autoriza essa preferência no painel de cookies.</p>' }
+  };
+  const close = () => { dialog.hidden = true; document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-policy]').forEach((button) => button.addEventListener('click', () => {
+    const policy = copy[button.dataset.policy];
+    title.textContent = policy.title;
+    content.innerHTML = policy.body;
+    dialog.hidden = false;
+    document.body.style.overflow = 'hidden';
+    dialog.querySelector('.dialog-close').focus();
+  }));
+  dialog?.querySelectorAll('[data-close-policy]').forEach((button) => button.addEventListener('click', close));
+  window.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !dialog.hidden) close(); });
+}
+
 function setupCookies() {
   const layer = document.querySelector('[data-cookie-layer]');
   const preferences = document.querySelector('[data-cookie-preferences]');
@@ -114,4 +135,5 @@ setupNavigation();
 setupRevealsAndDepth();
 setupProgramDialog();
 setupVolunteerForm();
+setupPolicies();
 setupCookies();

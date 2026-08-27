@@ -11,3 +11,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.pulse{animation:none}.action-card img{transition:none}}
 .cookie-preferences[hidden]{display:none!important}
 .cookie-panel[hidden]{display:none!important}
+.policy-panel [data-policy-content]{display:grid;gap:15px;color:#102d25bd;font-size:14px;line-height:1.7}.policy-panel [data-policy-content] p{margin:0}
